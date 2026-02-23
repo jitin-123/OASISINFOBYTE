@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerunds and Parts of Speech Challenge</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <div class="header-icon">
+                    <svg viewBox="0 0 24 24" fill="white" width="18" height="18">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/>
+                        <path d="M11 7h2v2h-2zm0 4h2v6h-2z"/>
+                    </svg>
+                </div>
+                <h1>Gerunds and Parts of Speech Challenge</h1>
+            </div>
+            <div class="header-right">
+                <button class="icon-btn">
+                    <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+                </button>
+                <button class="icon-btn">
+                    <svg viewBox="0 0 24 24" fill="white" width="20" height="20"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Quiz Content -->
+        <div id="quiz-view">
+            <div class="question-info">
+                <span id="q-counter" class="blue-text">Question 1 of 10</span>
+                <h2 id="q-text">Loading question...</h2>
+                <p id="q-hint" class="hint-text"></p>
+            </div>
+
+            <div id="options-list" class="options-container"></div>
+
+            <div id="feedback-panel" class="feedback-panel hidden">
+                <p id="rationale-text"></p>
+            </div>
+
+            <div class="nav-controls">
+                <button id="back-btn" class="nav-btn secondary hidden">← Back</button>
+                <button id="next-btn" class="nav-btn primary hidden">Next Question →</button>
+            </div>
+        </div>
+
+        <!-- Results View (Matches Screenshot) -->
+        <div id="results-view" class="hidden">
+            <h2 class="result-title">You did it! Quiz complete.</h2>
+            
+            <div class="stats-row">
+                <div class="stat-box">
+                    <span class="stat-label">Score</span>
+                    <span id="final-score" class="stat-value">6/10</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Accuracy</span>
+                    <span id="final-accuracy" class="stat-value">60%</span>
+                </div>
+                <div class="stat-box breakdown">
+                    <div class="b-row"><span>Right</span><span id="count-right">6</span></div>
+                    <div class="b-row"><span>Wrong</span><span id="count-wrong">4</span></div>
+                    <div class="b-row"><span>Skipped</span><span>0</span></div>
+                </div>
+            </div>
+
+            <div class="analysis-card">
+                <div class="analysis-icon">
+                    <svg viewBox="0 0 24 24" fill="#4a90e2" width="32" height="32">
+                        <path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.09-4-4L2 15.08l1.5 1.41z"/>
+                    </svg>
+                </div>
+                <div class="analysis-content">
+                    <h3>Strengths and growth areas</h3>
+                    <p>Get a summary of your key strengths and discover areas where you can focus your studies.</p>
+                </div>
+                <button class="pill-btn">Analyse my performance</button>
+            </div>
+
+            <button onclick="location.reload()" class="restart-link">Restart Quiz</button>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
